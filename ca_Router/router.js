@@ -5,3 +5,13 @@
  * Created:     2025-07-16
  * ========================================
  */
+
+const express=require('express');
+const commonRouter=express.Router();
+const productController=require('../controller/productController');
+
+commonRouter.get('CA/getProducts',productController.getAllProduct);
+
+
+
+module.exports = commonRouter;
